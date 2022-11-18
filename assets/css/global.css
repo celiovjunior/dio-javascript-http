@@ -3,7 +3,12 @@
 :root {
   --font-color: #FFF;
   --earth: #14A06F;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -27,11 +32,17 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
-.pokemons li {
+pokemons li {
   padding: 2rem 1rem;
   margin: 0.5rem;
   border-radius: 8px;
-  height: 120px;
   background-color: var(--earth);
   color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: 60px;
 }
