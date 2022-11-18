@@ -17,17 +17,19 @@ function convertPokemonToHtml (pokemon) {
         </div>
       </div>
     </li>
-    `
+  `
 }
 
 fetch(url)
  .then(res => res.json())
  .then(data => {
-   const pokemonsList = data.results
-   pokemonsList.forEach((item) => {
-    console.log(item.name)
+   const pokemonArray = data.results
+   pokemonArray.forEach((item) => {    
+    const pokemonList = document.getElementById('pokemon-list')
+    pokemonList.innerHTML += convertPokemonToHtml(item)
+    console.log(pokemonList)
    })
-   debugger  
+  //  debugger  
   })
  .catch(error => {
   console.log(error)
