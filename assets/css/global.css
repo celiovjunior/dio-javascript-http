@@ -170,3 +170,7 @@ body {
   color: white;
   padding: .25rem .5rem;
 }
+
+.pagination button:hover {
+  cursor: pointer;
+}
